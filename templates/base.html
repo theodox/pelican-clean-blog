@@ -145,15 +145,16 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% block content %}{% endblock content %}
             </div>
+            {% if 1 != 2 %}
             <div class="col-lg-2 col-md-1">
-                <h3> Topics </h3>
+                <h3> #tags </h3>
                     
                         {% for tag, artcl in tags  %}
                         <a class="tag-link" href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>,&nbsp;
                         {% endfor %}
                     
                 </div>
-
+            {% endif %}
         </div>
     </div>
 
