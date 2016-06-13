@@ -1,10 +1,12 @@
 # Pelican Clean Blog Theme
 
-Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).
+This is a derivation of the  based in [Pelican-Clean-blog](https://github.com/gilsondev/pelican-clean-blog).  The major changes:
 
-## Screenshot
+* Added a right side responsive column
+* Social links in the right column
+* Tag list in the right column
+* Code highlighting css based on `zenburn`, tweaked for cooler colors
 
-![Screenshot](screenshot.png)
 
 ## Basic configuration
 
