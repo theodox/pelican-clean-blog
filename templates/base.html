@@ -143,47 +143,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% block content %}{% endblock content %}
+                {% block content %}
+                {% endblock content %}
             </div>
             <!---- right sidebar -->
-            <div class="col-lg-2 col-md-1">
-                <div class="vertical-spacer">
-                <h4>@social</h4>
-                    <ul class="list-inline text-center">
-                    {% if SOCIAL %}
-                        {% for name,link in SOCIAL %}
-                            <li>
-                                <a href="{{ link }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    {% endif %}
-                    </ul>
-                
-                </div>
-                <div class="vertical-spacer">
-                <h4>#tags</h4>
-                    <a href="/tags">tag list</a>
-                    
-                        {% for tag, artcl in tags|sort  %}
-                        <a class="tag-link" href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>
-                        {% endfor %}
-                </div>
-                 <div class="vertical-spacer">
-                <h4>archives</h4>
-                    <a href="/archives">site history</a>
-                </div> 
-                <div class="vertical-spacer">
-                <h4>feeds </h4>
-                <p class="feed-button"><a href="/feeds/atom.xml">Atom</a></p>
-                <p class="feed-button"><a href="/feeds/rss.xml">Rss</a>&nbsp;</p>
-                </div>   
-
-            </div>
+            {% include 'right-sidebar.html' %}
         </div>
     </div>
 
