@@ -63,6 +63,17 @@
             {% endif %}
             <!-- removed comments, it was cluttery -->
             <!--{% include 'comments.html' %}-->
+            {% if loop.first and not  articles_page.has_previous() %}
+                {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+                <a href="{{ SITEURL }}/{{ article.url }}#comment" > 
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true">
+                 </a>
+                 <a href="{{ SITEURL }}/{{ article.url }}#comment" > 
+                  <span class="glyphicon glyphicon-share" aria-hidden="true">
+                 </a>
+              {% endif %}
+            {% endif %}
+
         </div>
     {% endfor %}
 
